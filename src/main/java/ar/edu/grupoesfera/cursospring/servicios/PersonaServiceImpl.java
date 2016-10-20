@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ar.edu.grupoesfera.cursospring.dao.PersonaDao;
 import ar.edu.grupoesfera.cursospring.modelo.Persona;
+import ar.edu.grupoesfera.cursospring.modelo.Usuario;
 
 @Service("personaService")
 @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
@@ -28,6 +29,11 @@ public class PersonaServiceImpl implements PersonaService{
 
 	public Persona buscarPorId(Long id) {
 		return personaDao.findById(id);
+	}
+
+	@Override
+	public Usuario validarUsuario(String usuario, String password) {
+		return null;
 	}
 
 }

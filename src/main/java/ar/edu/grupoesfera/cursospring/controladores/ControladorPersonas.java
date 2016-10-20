@@ -1,5 +1,8 @@
 package ar.edu.grupoesfera.cursospring.controladores;
 
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,9 +13,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.grupoesfera.cursospring.modelo.Persona;
+import ar.edu.grupoesfera.cursospring.modelo.Usuario;
+import ar.edu.grupoesfera.cursospring.servicios.PersonaService;
 
 @Controller
 public class ControladorPersonas {
+	
+	@Inject
+	private PersonaService personaService;
 
 	@RequestMapping("/hi/amigo")
 	public ModelAndView helloWorld(@RequestParam("nombre") String nombre) {
@@ -49,5 +57,27 @@ public class ControladorPersonas {
 		model.put("persona", persona);
 		return new ModelAndView("formulario", model);
 	}
+	
+	@RequestMapping(path="/login", method = RequestMethod.POST)
+    public ModelAndView login(@ModelAttribute("usuario") Usuario usuario, HttpServletRequest request) {
+		
+		Usuario usuarioValidado = personaService.validarUsuario(usuario.getUsuario(), usuario.getPassword());
+		if(usuarioValidado != null){
+			request.getSession().setAttribute("ROL",usuarioValidado.getRol());
+			return new ModelAndView("home");
+		} else {
+			ModelMap model = new ModelMap();
+			model.put("error", "usuaio-invalido");
+			return new ModelAndView("login", model);
+		}
+    }
+
+	public void setPersonaService(PersonaService personaService) {
+		this.personaService = personaService;
+	}
+	
+	
+	
+	
 
 }

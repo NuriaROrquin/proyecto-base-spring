@@ -21,13 +21,18 @@ public class ControladorApiRestTest {
 		personaServiceMock = mock(PersonaService.class);
 		controlador.setPersonaService(personaServiceMock);
 	}
+	
 	@Test
 	public void testListarPersonas(){
 		Persona personaMock = mock(Persona.class);
 		List<Persona> lista = Arrays.asList(personaMock);
 		when(personaServiceMock.listarTodas()).thenReturn(lista);
 		
-		assertThat(controlador.listarPersonas()).hasSize(1);
-		assertThat(controlador.listarPersonas()).containsOnly(personaMock);
+		List<Persona> personas = controlador.listarPersonas();
+		
+		verify(personaServiceMock, times(1)).listarTodas();
+		assertThat(personas).hasSize(1);
+		assertThat(personas).containsOnly(personaMock);
+		
 	}
 }
