@@ -26,8 +26,9 @@ public class Farmacia {
 	@OneToOne(cascade=CascadeType.ALL)
 	private Direccion direccion;
 
-	public Farmacia(String nombre) {
+	public Farmacia(String nombre, String diaDeTurno) {
 		this.nombre = nombre;
+		this.diaDeTurno = diaDeTurno;
 	}
 
 	public Farmacia(){}

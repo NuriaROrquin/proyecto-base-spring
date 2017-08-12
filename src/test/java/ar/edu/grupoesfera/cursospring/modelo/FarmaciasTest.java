@@ -13,30 +13,34 @@ import java.util.List;
 
 public class FarmaciasTest extends SpringTest{
 
-    private Direccion direccion = new Direccion();
-    private Barrio barrio = new Barrio();
-    private Comuna comuna = new Comuna();
-
     @Before
     public void setup(){
 
         Barrio caballito = new Barrio("Caballito");
         getSession().save(caballito);
 
-        Farmacia farmacia1 = new Farmacia("Farmacia Alfa");
+        Farmacia farmacia1 = new Farmacia("Farmacia Alfa", "Lunes");
         Direccion peruAl100 = new Direccion("Peru", "120", caballito);
         farmacia1.setDireccion(peruAl100);
         getSession().save(farmacia1);
 
-        Farmacia farmacia2 = new Farmacia("Farmacia Beta");
+        Farmacia farmacia2 = new Farmacia("Farmacia Beta", "Martes");
         Direccion peruAl300 = new Direccion("Peru", "333", caballito);
         farmacia2.setDireccion(peruAl300);
         getSession().save(farmacia2);
 
-        Farmacia farmacia3 = new Farmacia("Farmacia Omega");
+        Farmacia farmacia3 = new Farmacia("Farmacia Omega", "Miercoles");
         Direccion limaAl400 = new Direccion("Lima", "402", caballito);
         farmacia3.setDireccion(limaAl400);
         getSession().save(farmacia3);
+    }
+
+    @Test @Transactional @Rollback
+    public void buscarLasFarmaciasDeTurnoLosMartesDeberiaDevolverUnaFarmacia(){
+        final List farmacias = getSession().createCriteria(Farmacia.class)
+                .add(Restrictions.eq("diaDeTurno", "Martes"))
+                .list();
+        assertThat(farmacias).hasSize(1);
     }
 
     @Test @Transactional @Rollback
