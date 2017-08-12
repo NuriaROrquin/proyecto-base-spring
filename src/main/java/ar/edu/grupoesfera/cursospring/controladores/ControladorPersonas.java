@@ -22,6 +22,14 @@ public class ControladorPersonas {
 	@Inject
 	private PersonaService personaService;
 
+	@RequestMapping("/saludito")
+	public ModelAndView escucharSaludo(){
+		ModelMap model = new ModelMap();
+		
+		model.put("saludoParaMostrar", "HOLA CAPO!!!!");
+		return new ModelAndView("saludo", model);
+	}
+	
 	@RequestMapping("/hi/amigo")
 	public ModelAndView helloWorld(@RequestParam("nombre") String nombre) {
 		
@@ -31,8 +39,8 @@ public class ControladorPersonas {
 		return new ModelAndView("mensaje", model);
 	}
 
-	@RequestMapping("/hola/{nombre}")
-	public ModelAndView helloWorld2(@PathVariable String nombre) {
+	@RequestMapping("/hola/{nombre}/ademas/{apellido}")
+	public ModelAndView helloWorld2(@PathVariable String nombre, @PathVariable String apellido) {
 		String message = "Hola, " + nombre + "!";
 		ModelMap model = new ModelMap();
 		model.put("message", message);
