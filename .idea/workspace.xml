@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62dfe062-d1f7-40cf-9480-15e2ce090dac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/Farmacia.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/Farmacia.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/modelo/FarmaciasTest.java" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/modelo/FarmaciasTest.java" />
     </list>
     <ignored path="proyecto-base-spring.iws" />
@@ -27,20 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test-hibernateContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/test-hibernateContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Farmacia.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/Farmacia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="420">
               <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
               <folding>
                 <element signature="e#739#740#0" expanded="true" />
@@ -63,8 +52,8 @@
       <file leaf-file-name="FarmaciasTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/modelo/FarmaciasTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+            <state relative-caret-position="680">
+              <caret line="40" column="71" lean-forward="false" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,8 +99,8 @@
         <option value="$PROJECT_DIR$/src/test/resources/test-hibernateContext.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/Direccion.java" />
         <option value="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/Barrio.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/modelo/FarmaciasTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/Farmacia.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/modelo/FarmaciasTest.java" />
       </list>
     </option>
   </component>
@@ -862,7 +851,7 @@
       <workItem from="1497377342497" duration="168000" />
       <workItem from="1497874188378" duration="8000" />
       <workItem from="1501597775819" duration="117000" />
-      <workItem from="1502536532609" duration="2479000" />
+      <workItem from="1502536532609" duration="2971000" />
     </task>
     <servers />
   </component>
@@ -873,11 +862,11 @@
     <history-entry file="FarmaciasTest - 2017.08.12 at 08h 56m 47s.xml">
       <configuration name="FarmaciasTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FarmaciasTest_buscarLasFarmaciasDeUnaCalleDeberiaDevolverDosFarmacias - 2017.08.12 at 08h 42m 54s.xml">
-      <configuration name="FarmaciasTest.buscarLasFarmaciasDeUnaCalleDeberiaDevolverDosFarmacias" configurationId="JUnit" />
+    <history-entry file="FarmaciasTest - 2017.08.12 at 09h 01m 42s.xml">
+      <configuration name="FarmaciasTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FarmaciasTest_buscarLasFarmaciasDeUnaCalleDeberiaDevolverDosFarmacias - 2017.08.12 at 08h 43m 32s.xml">
-      <configuration name="FarmaciasTest.buscarLasFarmaciasDeUnaCalleDeberiaDevolverDosFarmacias" configurationId="JUnit" />
+    <history-entry file="FarmaciasTest - 2017.08.12 at 09h 03m 19s.xml">
+      <configuration name="FarmaciasTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FarmaciasTest_buscarLasFarmaciasDeUnaCalleDeberiaDevolverDosFarmacias - 2017.08.12 at 08h 43m 48s.xml">
       <configuration name="FarmaciasTest.buscarLasFarmaciasDeUnaCalleDeberiaDevolverDosFarmacias" configurationId="JUnit" />
@@ -899,7 +888,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3510000" />
+    <option name="totallyTimeSpent" value="4002000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1003" extended-state="6" />
@@ -924,7 +913,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2754491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30538923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7508982" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27967915" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1164,7 +1153,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/Farmacia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="420">
           <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding>
             <element signature="e#739#740#0" expanded="true" />
@@ -1175,8 +1164,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/modelo/FarmaciasTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+        <state relative-caret-position="680">
+          <caret line="40" column="71" lean-forward="false" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

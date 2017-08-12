@@ -19,6 +19,9 @@ public class FarmaciasTest extends SpringTest{
         Barrio caballito = new Barrio("Caballito");
         getSession().save(caballito);
 
+        Barrio flores = new Barrio("Flores");
+        getSession().save(flores);
+
         Farmacia farmacia1 = new Farmacia("Farmacia Alfa", "Lunes");
         Direccion peruAl100 = new Direccion("Peru", "120", caballito);
         farmacia1.setDireccion(peruAl100);
@@ -33,6 +36,11 @@ public class FarmaciasTest extends SpringTest{
         Direccion limaAl400 = new Direccion("Lima", "402", caballito);
         farmacia3.setDireccion(limaAl400);
         getSession().save(farmacia3);
+
+        Farmacia farmacia4 = new Farmacia("Farmacia Gamma", "Jueves");
+        Direccion piedrasAl100 = new Direccion("Piedras", "111", flores);
+        farmacia4.setDireccion(piedrasAl100);
+        getSession().save(farmacia4);
     }
 
     @Test @Transactional @Rollback
@@ -50,5 +58,14 @@ public class FarmaciasTest extends SpringTest{
                 .add(Restrictions.eq("direccionBuscada.calle", "Peru"))
                 .list();
         assertThat(farmacias).hasSize(2);
+    }
+
+    @Test @Transactional @Rollback
+    public void buscarLasFarmaciasDeUnBarrioDeberiaDevolverTresFarmacias(){
+        final List farmacias = getSession().createCriteria(Farmacia.class)
+                .createAlias("direccion.barrio", "barrioBuscado")
+                .add(Restrictions.eq("barrioBuscado.nombre", "Caballito"))
+                .list();
+        assertThat(farmacias).hasSize(3);
     }
 }
