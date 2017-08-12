@@ -17,8 +17,8 @@ public class Inicializacion {
     @Inject
     private SessionFactory sessionFactory;
 
-    @PostConstruct
-    @Transactional(readOnly = false, propagation = Propagation.REQUIRED, rollbackFor = { Exception.class })
+//    @PostConstruct
+//    @Transactional(readOnly = false, propagation = Propagation.REQUIRED, rollbackFor = { Exception.class })
     public void cargarDatos(){
         final Session session = sessionFactory.openSession();
         Persona p1 = new Persona();
