@@ -11,10 +11,10 @@ import static org.assertj.core.api.Assertions.*;
 
 import java.util.List;
 
-public class FarmaciasTest extends SpringTest{
+public class FarmaciasTest extends SpringTest {
 
     @Before
-    public void setup(){
+    public void setup() {
 
         Barrio caballito = new Barrio("Caballito");
         getSession().save(caballito);
@@ -43,16 +43,20 @@ public class FarmaciasTest extends SpringTest{
         getSession().save(farmacia4);
     }
 
-    @Test @Transactional @Rollback
-    public void buscarLasFarmaciasDeTurnoLosMartesDeberiaDevolverUnaFarmacia(){
+    @Test
+    @Transactional
+    @Rollback
+    public void buscarLasFarmaciasDeTurnoLosMartesDeberiaDevolverUnaFarmacia() {
         final List farmacias = getSession().createCriteria(Farmacia.class)
                 .add(Restrictions.eq("diaDeTurno", "Martes"))
                 .list();
         assertThat(farmacias).hasSize(1);
     }
 
-    @Test @Transactional @Rollback
-    public void buscarLasFarmaciasDeUnaCalleDeberiaDevolverDosFarmacias(){
+    @Test
+    @Transactional
+    @Rollback
+    public void buscarLasFarmaciasDeUnaCalleDeberiaDevolverDosFarmacias() {
         final List farmacias = getSession().createCriteria(Farmacia.class)
                 .createAlias("direccion", "direccionBuscada")
                 .add(Restrictions.eq("direccionBuscada.calle", "Peru"))
@@ -60,12 +64,16 @@ public class FarmaciasTest extends SpringTest{
         assertThat(farmacias).hasSize(2);
     }
 
-    @Test @Transactional @Rollback
-    public void buscarLasFarmaciasDeUnBarrioDeberiaDevolverTresFarmacias(){
+
+    @Test
+    @Transactional
+    @Rollback
+    public void buscarLasFarmaciasDeUnBarrioDeberiaDevolverTresFarmacias() {
         final List farmacias = getSession().createCriteria(Farmacia.class)
                 .createAlias("direccion.barrio", "barrioBuscado")
                 .add(Restrictions.eq("barrioBuscado.nombre", "Caballito"))
                 .list();
         assertThat(farmacias).hasSize(3);
     }
+
 }

@@ -16,6 +16,8 @@ import ar.edu.grupoesfera.cursospring.modelo.Persona;
 import ar.edu.grupoesfera.cursospring.modelo.Usuario;
 import ar.edu.grupoesfera.cursospring.servicios.PersonaService;
 
+import java.util.List;
+
 @Controller
 public class ControladorPersonas {
 	

@@ -29,33 +29,38 @@ public class ControladorPersonasTest {
 		personaServiceMock = mock(PersonaService.class);
 		controladorPersonas.setPersonaService(personaServiceMock);
 	}
+
+	@Test
+	public void loginConUsuarioYPasswordInorrectosDeberiaLlevarALoginNuevamente(){
+		// preparacion
+		when(personaServiceMock.validarUsuario(anyString(), anyString())).thenReturn(null);
+
+		// ejecucion
+		ModelAndView modelAndView = controladorPersonas.login(usuarioMock, requestMock);
+
+		// validacion
+		assertThat(modelAndView.getViewName()).isEqualTo("login");
+		assertThat(modelAndView.getModel().get("error")).isEqualTo("usuaio-invalido");
+		verify(sessionMock, times(0)).setAttribute("ROL", "ADMIN");
+	}
 	
 	@Test
 	public void loginConUsuarioYPasswordCorrectosDeberiaLLevarAHome(){
 		// preparacion
+		Usuario usuarioEncontradoMock = mock(Usuario.class);
+		when(usuarioEncontradoMock.getRol()).thenReturn("ADMIN");
+
 		when(requestMock.getSession()).thenReturn(sessionMock);
-		when(usuarioMock.getRol()).thenReturn("ADMIN");
-		when(personaServiceMock.validarUsuario(anyString(), anyString())).thenReturn(usuarioMock);
+		when(usuarioEncontradoMock.getRol()).thenReturn("ADMIN");
+		when(personaServiceMock.validarUsuario(anyString(), anyString())).thenReturn(usuarioEncontradoMock);
 		
 		// ejecucion
 		ModelAndView modelAndView = controladorPersonas.login(usuarioMock, requestMock);
 		
 		// validacion
 		assertThat(modelAndView.getViewName()).isEqualTo("home");
-		verify(sessionMock, times(1)).setAttribute("ROL", "ADMIN");
+		verify(sessionMock, times(1)).setAttribute("ROL", usuarioEncontradoMock.getRol());
 	}
 	
-	@Test
-	public void loginConUsuarioYPasswordInorrectosDeberiaLlevarALoginNuevamente(){
-		// preparacion
-		when(personaServiceMock.validarUsuario(anyString(), anyString())).thenReturn(null);
-		
-		// ejecucion
-		ModelAndView modelAndView = controladorPersonas.login(usuarioMock, requestMock);
-		
-		// validacion
-		assertThat(modelAndView.getViewName()).isEqualTo("login");
-		assertThat(modelAndView.getModel().get("error")).isEqualTo("usuaio-invalido");
-		verify(sessionMock, times(0)).setAttribute("ROL", "ADMIN");
-	}
+
 }
