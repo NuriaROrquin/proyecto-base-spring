@@ -20,4 +20,14 @@ public class ServicioLoginImpl implements ServicioLogin {
 		return servicioLoginDao.consultarUsuario(usuario);
 	}
 
+	@Override
+	public Boolean existeUsuario(String email) {
+		return null;
+	}
+
+	@Override
+	public void registrar(Usuario usuario) {
+
+	}
+
 }

@@ -42,6 +42,19 @@ public class ControladorLogin {
 		return new ModelAndView("login", model);
 	}
 
+	@RequestMapping(path = "/registrarme", method = RequestMethod.POST)
+	public ModelAndView registrarme(@ModelAttribute("usuario") Usuario usuario) {
+		ModelMap model = new ModelMap();
+
+		if (!servicioLogin.existeUsuario(usuario.getEmail())) {
+			servicioLogin.registrar(usuario);
+			return new ModelAndView("redirect:/login");
+		} else {
+			model.put("error", "Usuario ya existe");
+			return new ModelAndView("nuevo-usuario", model);
+		}
+	}
+
 	@RequestMapping(path = "/home", method = RequestMethod.GET)
 	public ModelAndView irAHome() {
 		return new ModelAndView("home");
@@ -51,6 +64,14 @@ public class ControladorLogin {
 	public ModelAndView inicio() {
 		return new ModelAndView("redirect:/login");
 	}
+
+	@RequestMapping(path = "/nuevo-usuario", method = RequestMethod.GET)
+	public ModelAndView nuevoUsuario() {
+		ModelMap model = new ModelMap();
+		model.put("usuario", new Usuario());
+		return new ModelAndView("nuevo-usuario", model);
+	}
+
 
 	public void setServicioLogin(ServicioLogin servicioLogin) {
 		this.servicioLogin = servicioLogin;

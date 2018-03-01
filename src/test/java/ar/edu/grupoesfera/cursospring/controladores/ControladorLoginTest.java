@@ -1,7 +1,6 @@
 package ar.edu.grupoesfera.cursospring.controladores;
 
 import ar.edu.grupoesfera.cursospring.modelo.Usuario;
-import ar.edu.grupoesfera.cursospring.servicios.PersonaService;
 import ar.edu.grupoesfera.cursospring.servicios.ServicioLogin;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,28 +14,28 @@ import static org.mockito.Mockito.*;
 
 public class ControladorLoginTest {
 
-	private ControladorLogin controladorPersonas = new ControladorLogin();
+	private ControladorLogin controladorLogin = new ControladorLogin();
 	private Usuario usuarioMock;
 	private HttpServletRequest requestMock;
 	private HttpSession sessionMock;
-	private ServicioLogin personaServiceMock;
+	private ServicioLogin servicioLoginMock;
 	
 	@Before
 	public void init(){
 		usuarioMock = mock(Usuario.class);
 		requestMock = mock(HttpServletRequest.class);
 		sessionMock = mock(HttpSession.class);
-		personaServiceMock = mock(ServicioLogin.class);
-		controladorPersonas.setServicioLogin(personaServiceMock);
+		servicioLoginMock = mock(ServicioLogin.class);
+		controladorLogin.setServicioLogin(servicioLoginMock);
 	}
 
 	@Test
 	public void loginConUsuarioYPasswordInorrectosDeberiaLlevarALoginNuevamente(){
 		// preparacion
-		when(personaServiceMock.consultarUsuario(any(Usuario.class))).thenReturn(null);
+		when(servicioLoginMock.consultarUsuario(any(Usuario.class))).thenReturn(null);
 
 		// ejecucion
-		ModelAndView modelAndView = controladorPersonas.validarLogin(usuarioMock, requestMock);
+		ModelAndView modelAndView = controladorLogin.validarLogin(usuarioMock, requestMock);
 
 		// validacion
 		assertThat(modelAndView.getViewName()).isEqualTo("login");
@@ -51,14 +50,42 @@ public class ControladorLoginTest {
 		when(usuarioEncontradoMock.getRol()).thenReturn("ADMIN");
 
 		when(requestMock.getSession()).thenReturn(sessionMock);
-		when(personaServiceMock.consultarUsuario(any(Usuario.class))).thenReturn(usuarioEncontradoMock);
+		when(servicioLoginMock.consultarUsuario(any(Usuario.class))).thenReturn(usuarioEncontradoMock);
 		
 		// ejecucion
-		ModelAndView modelAndView = controladorPersonas.validarLogin(usuarioMock, requestMock);
+		ModelAndView modelAndView = controladorLogin.validarLogin(usuarioMock, requestMock);
 		
 		// validacion
 		assertThat(modelAndView.getViewName()).isEqualTo("redirect:/home");
 		verify(sessionMock, times(1)).setAttribute("ROL", usuarioEncontradoMock.getRol());
+	}
+
+	@Test
+	public void registrameSiUsuarioNoExisteDeberiaCrearUsuarioYVolverAlLogin(){
+
+		// preparacion
+		when(servicioLoginMock.existeUsuario(usuarioMock.getEmail())).thenReturn(Boolean.FALSE);
+
+		// ejecucion
+		ModelAndView modelAndView = controladorLogin.registrarme(usuarioMock);
+
+		// validacion
+		assertThat(modelAndView.getViewName()).isEqualTo("redirect:/login");
+		verify(servicioLoginMock, times(1)).registrar(usuarioMock);
+	}
+
+	@Test
+	public void registrarmeSiUsuarioNoExisteDeberiaVolverAFormularioYMostrarError(){
+		// preparacion
+		when(servicioLoginMock.existeUsuario(usuarioMock.getEmail())).thenReturn(Boolean.TRUE);
+
+		// ejecucion
+		ModelAndView modelAndView = controladorLogin.registrarme(usuarioMock);
+
+		// validacion
+		assertThat(modelAndView.getViewName()).isEqualTo("nuevo-usuario");
+		assertThat(modelAndView.getModel().get("error")).isEqualTo("Usuario ya existe");
+		verify(servicioLoginMock, never()).registrar(usuarioMock);
 	}
 	
 
