@@ -28,4 +28,9 @@ public class UsuarioDaoImpl implements UsuarioDao {
 		return null;
 	}
 
+	@Override
+	public void guardar(Usuario usuario) {
+
+	}
+
 }

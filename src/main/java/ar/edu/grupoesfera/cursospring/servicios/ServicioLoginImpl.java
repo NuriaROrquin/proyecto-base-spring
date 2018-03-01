@@ -27,6 +27,7 @@ public class ServicioLoginImpl implements ServicioLogin {
 		if(usuarioEncontrado != null){
 			throw new UsuarioExistente();
 		}
+		usuarioDao.guardar(usuario);
 	}
 
 	public void setUsuarioDao(UsuarioDao usuarioDao) {

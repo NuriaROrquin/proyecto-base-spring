@@ -6,6 +6,7 @@ import static org.assertj.core.api.Assertions.*;
 import ar.edu.grupoesfera.cursospring.dao.UsuarioDao;
 import ar.edu.grupoesfera.cursospring.modelo.Usuario;
 import ar.edu.grupoesfera.cursospring.modelo.UsuarioExistente;
+import org.hibernate.HibernateException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -28,6 +29,16 @@ public class ServicioLoginTest {
 
         // preparacion
         when(usuarioDaoMock.buscarPor(usuarioMock.getEmail())).thenReturn(new Usuario());
+
+        // ejecucion
+        servicioLogin.registrar(usuarioMock);
+    }
+
+    @Test(expected = Exception.class)
+    public void registrarmeDeberiaLanzarExceptionSiOcurreUnErrorAlGuardarElUsuarioNuevo() throws UsuarioExistente {
+
+        // preparacion
+        doThrow(HibernateException.class).when(usuarioDaoMock).guardar(usuarioMock);
 
         // ejecucion
         servicioLogin.registrar(usuarioMock);

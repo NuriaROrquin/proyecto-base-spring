@@ -8,4 +8,6 @@ public interface UsuarioDao {
 	Usuario consultarUsuario(Usuario usuario);
 
     Usuario buscarPor(String email);
+
+    void guardar(Usuario usuario);
 }
