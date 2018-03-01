@@ -25,12 +25,15 @@ public class UsuarioDaoImpl implements UsuarioDao {
 
 	@Override
 	public Usuario buscarPor(String email) {
-		return null;
+		final Session session = sessionFactory.getCurrentSession();
+		return (Usuario) session.createCriteria(Usuario.class)
+				.add(Restrictions.eq("email", email))
+				.uniqueResult();
 	}
 
 	@Override
 	public void guardar(Usuario usuario) {
-
+		sessionFactory.getCurrentSession().save(usuario);
 	}
 
 }
