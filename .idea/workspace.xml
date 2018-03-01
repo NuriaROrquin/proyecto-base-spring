@@ -10,39 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62dfe062-d1f7-40cf-9480-15e2ce090dac" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/proyecto_base_spring_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/proyecto_base_spring_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/RegistrarmeAceptacionIT.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/META-INF/MANIFEST.MF" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/classes/.gitkeep" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/classes/META-INF/MANIFEST.MF" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/classes/META-INF/maven/proyecto-base-spring/proyecto-base-spring/pom.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/classes/META-INF/maven/proyecto-base-spring/proyecto-base-spring/pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/classes/applicationContext.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/classes/hibernateContext.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/classes/log4j.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/classes/spring-servlet.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/jsp/confirmacion.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/jsp/formulario.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/jsp/home.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/jsp/login.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/jsp/mensaje.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/jsp/nuevo-usuario.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/jsp/verMensaje.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/WEB-INF/web.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/css/bootstrap-theme.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/proyecto_base_spring_war_exploded/js/jquery-1.11.3.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/proyecto-base-spring.iml" afterPath="$PROJECT_DIR$/proyecto-base-spring.iml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/nuevo-usuario.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/nuevo-usuario.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/BasicoAceptacionIT.java" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/BasicoAceptacionIT.java" />
     </list>
     <ignored path="proyecto-base-spring.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,21 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="RegistrarmeAceptacionIT.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/RegistrarmeAceptacionIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicoAceptacionIT.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/BasicoAceptacionIT.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            <state relative-caret-position="306">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,31 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test-applicationContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/test-applicationContext.xml">
+      <file leaf-file-name="Barrio.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/Barrio.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="15" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test-hibernateContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/test-hibernateContext.xml">
+      <file leaf-file-name="nuevo-usuario.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/nuevo-usuario.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsuarioDaoTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/dao/UsuarioDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="220">
+              <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -153,7 +104,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/dao/Inicializacion.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/nuevo-usuario.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/servicios/ServicioLogin.java" />
         <option value="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/UsuarioExistente.java" />
         <option value="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/controladores/ControladorLogin.java" />
@@ -165,8 +115,10 @@
         <option value="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/servicios/ServicioLoginTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/dao/UsuarioDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/dao/UsuarioDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/BasicoAceptacionIT.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/BasicoAceptacionIT.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/nuevo-usuario.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/RegistrarmeAceptacionIT.java" />
       </list>
     </option>
   </component>
@@ -228,6 +180,60 @@
               <item name="proyecto-base-spring" type="b2602c69:ProjectViewProjectNode" />
               <item name="proyecto-base-spring" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyecto-base-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto-base-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyecto-base-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto-base-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cursospring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyecto-base-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto-base-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cursospring" type="462c0819:PsiDirectoryNode" />
+              <item name="modelo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyecto-base-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto-base-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyecto-base-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto-base-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyecto-base-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto-base-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyecto-base-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyecto-base-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -265,7 +271,10 @@
             </path>
             <path>
               <item name="proyecto-base-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="proyecto-base-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -957,7 +966,7 @@
       <workItem from="1519829765743" duration="822000" />
       <workItem from="1519908452432" duration="7980000" />
       <workItem from="1519923845914" duration="2169000" />
-      <workItem from="1519926626223" duration="1223000" />
+      <workItem from="1519926626223" duration="2769000" />
     </task>
     <servers />
   </component>
@@ -994,7 +1003,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23641000" />
+    <option name="totallyTimeSpent" value="25187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1046" extended-state="6" />
@@ -1103,13 +1112,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/modelo/FarmaciasTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="77" column="1" lean-forward="false" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/test-hibernateContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1209,13 +1211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="22" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/Barrio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1330,14 +1325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="26" column="52" lean-forward="false" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/nuevo-usuario.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="20" column="95" lean-forward="false" selection-start-line="20" selection-start-column="95" selection-end-line="20" selection-end-column="95" />
           <folding />
         </state>
       </provider>
@@ -1462,6 +1449,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/BasicoAceptacionIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/test-hibernateContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
@@ -1472,27 +1477,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/dao/UsuarioDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
+        <state relative-caret-position="66">
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/BasicoAceptacionIT.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/nuevo-usuario.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/modelo/Barrio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+        <state relative-caret-position="0">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/aceptacion/RegistrarmeAceptacionIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

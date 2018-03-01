@@ -1,18 +1,15 @@
 package ar.edu.grupoesfera.cursospring.aceptacion;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class BasicoAceptacionIT {
 
@@ -39,37 +36,5 @@ public class BasicoAceptacionIT {
 		connection.connect();
 		assertThat(connection.getResponseCode()).isEqualTo(200);
 	}
-
-//	@Test
-//	public void pizzeriaMasCercanaAlObelisco() throws Exception {
-//
-//		String latitudObelisco = "-34.603765";
-//		String longitudObelisco = "-58.381570";
-//
-//		String url = urlBase +"/poiMasCercano/pizzerias/"+latitudObelisco+"/"+longitudObelisco;
-//
-//		String respuesta = this.obtenerContenidoRespuesta(url);
-//		assertThat(respuesta).contains("cuartetas");
-//	}
-
-	private String obtenerContenidoRespuesta(String url) throws Exception {
-		HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
-		connection.connect();
-		return new BufferedReader(
-				new InputStreamReader(
-					connection.getInputStream())).readLine();
-	}
-
-//	@Test
-//	public void pizzeriaMasCercanaAlObeliscoConSelenium(){
-//
-//		String latitudOblelisco = "-34.603765";
-//		String longitudObleisco = "-58.381570";
-//
-//		String url = urlBase +"/poiMasCercano/pizzerias/"+latitudOblelisco+"/"+longitudObleisco;
-//
-//		seleniumDriver.get(url);
-//		assertThat(seleniumDriver.getPageSource()).contains("cuartetas");
-//	}
 
 }

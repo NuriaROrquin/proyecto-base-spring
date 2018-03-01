@@ -18,7 +18,7 @@
 					<form:input path="email" id="email" type="email" class="form-control" />
 					<form:input path="password" type="password" id="password" class="form-control"/>     		  
 					
-					<button class="btn btn-lg btn-primary btn-block" Type="Submit"/>Registrarme</button>
+					<button id="btn-registrarme" class="btn btn-lg btn-primary btn-block" Type="Submit"/>Registrarme</button>
 				</form:form>
 
 				<c:if test="${not empty error}">
