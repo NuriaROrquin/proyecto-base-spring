@@ -47,7 +47,12 @@ public class ControladorLogin {
 		ModelMap model = new ModelMap();
 
 		if (!servicioLogin.existeUsuario(usuario.getEmail())) {
-			servicioLogin.registrar(usuario);
+			try{
+				servicioLogin.registrar(usuario);
+			} catch (Exception e){
+				model.put("error", "Error al registrar el nuevo usuario");
+				return new ModelAndView("nuevo-usuario", model);
+			}
 			return new ModelAndView("redirect:/login");
 		} else {
 			model.put("error", "Usuario ya existe");

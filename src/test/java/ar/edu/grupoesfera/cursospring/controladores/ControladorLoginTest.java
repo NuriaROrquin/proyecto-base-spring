@@ -87,6 +87,19 @@ public class ControladorLoginTest {
 		assertThat(modelAndView.getModel().get("error")).isEqualTo("Usuario ya existe");
 		verify(servicioLoginMock, never()).registrar(usuarioMock);
 	}
-	
+
+	@Test
+	public void errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError(){
+		// preparacion
+		when(servicioLoginMock.existeUsuario(usuarioMock.getEmail())).thenReturn(Boolean.FALSE);
+		doThrow(Exception.class).when(servicioLoginMock).registrar(usuarioMock);
+
+		// ejecucion
+		ModelAndView modelAndView = controladorLogin.registrarme(usuarioMock);
+
+		// validacion
+		assertThat(modelAndView.getViewName()).isEqualTo("nuevo-usuario");
+		assertThat(modelAndView.getModel().get("error")).isEqualTo("Error al registrar el nuevo usuario");
+	}
 
 }

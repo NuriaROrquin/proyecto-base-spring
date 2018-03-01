@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62dfe062-d1f7-40cf-9480-15e2ce090dac" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/nuevo-usuario.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/controladores/ControladorLogin.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/controladores/ControladorLogin.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/servicios/ServicioLogin.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/servicios/ServicioLogin.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/servicios/ServicioLoginImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/servicios/ServicioLoginImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/controladores/ControladorLoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/controladores/ControladorLoginTest.java" />
     </list>
     <ignored path="proyecto-base-spring.iws" />
@@ -40,8 +35,8 @@
       <file leaf-file-name="ControladorLoginTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/controladores/ControladorLoginTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="86" column="85" lean-forward="false" selection-start-line="86" selection-start-column="85" selection-end-line="86" selection-end-column="85" />
+            <state relative-caret-position="614">
+              <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -50,12 +45,16 @@
       <file leaf-file-name="ControladorLogin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/controladores/ControladorLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+            <state relative-caret-position="252">
+              <caret line="52" column="71" lean-forward="false" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2444#2445#0" expanded="true" />
-                <element signature="e#2485#2486#0" expanded="true" />
+                <element signature="e#2123#2124#0" expanded="true" />
+                <element signature="e#2161#2162#0" expanded="true" />
+                <element signature="e#2251#2252#0" expanded="true" />
+                <element signature="e#2300#2301#0" expanded="true" />
+                <element signature="e#2600#2601#0" expanded="true" />
+                <element signature="e#2641#2642#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -377,7 +376,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ControladorLoginTest.registrarmeSiUsuarioNoExisteDeberiaVolverAFormularioYMostrarError">
+  <component name="RunManager" selected="JUnit.ControladorLoginTest.errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -421,6 +420,31 @@
       <option name="MAIN_CLASS_NAME" value="ar.edu.grupoesfera.cursospring.controladores.ControladorLoginTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ControladorLoginTest.errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.grupoesfera.cursospring.controladores.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="proyecto-base-spring" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ar.edu.grupoesfera.cursospring.controladores" />
+      <option name="MAIN_CLASS_NAME" value="ar.edu.grupoesfera.cursospring.controladores.ControladorLoginTest" />
+      <option name="METHOD_NAME" value="errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -495,31 +519,6 @@
       <option name="PACKAGE_NAME" value="ar.edu.grupoesfera.cursospring.controladores" />
       <option name="MAIN_CLASS_NAME" value="ar.edu.grupoesfera.cursospring.controladores.ControladorLoginTest" />
       <option name="METHOD_NAME" value="registrarmeSiUsuarioNoExisteDeberiaVolverAFormularioYMostrarError" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="Prueba.tetett" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ar.edu.grupoesfera.cursospring.modelo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="proyecto-base-spring" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ar.edu.grupoesfera.cursospring.modelo" />
-      <option name="MAIN_CLASS_NAME" value="ar.edu.grupoesfera.cursospring.modelo.Prueba" />
-      <option name="METHOD_NAME" value="tetett" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -969,19 +968,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat-8.5" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.Prueba.tetett" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.loginConUsuarioYPasswordCorrectosDeberiaLLevarAHome" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.registrameSiUsuarioNoExisteDeberiaCrearUsuarioYVolverAlLogin" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.registrarmeSiUsuarioNoExisteDeberiaVolverAFormularioYMostrarError" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.loginConUsuarioYPasswordCorrectosDeberiaLLevarAHome" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.registrameSiUsuarioNoExisteDeberiaCrearUsuarioYVolverAlLogin" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.registrarmeSiUsuarioNoExisteDeberiaVolverAFormularioYMostrarError" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.registrarmeSiUsuarioNoExisteDeberiaVolverAFormularioYMostrarError" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.registrameSiUsuarioNoExisteDeberiaCrearUsuarioYVolverAlLogin" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.loginConUsuarioYPasswordCorrectosDeberiaLLevarAHome" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.Prueba.tetett" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.registrarmeSiUsuarioNoExisteDeberiaVolverAFormularioYMostrarError" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.registrameSiUsuarioNoExisteDeberiaCrearUsuarioYVolverAlLogin" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ControladorLoginTest.loginConUsuarioYPasswordCorrectosDeberiaLLevarAHome" />
       </list>
     </recent_temporary>
   </component>
@@ -1026,11 +1025,20 @@
       <workItem from="1519302053129" duration="2215000" />
       <workItem from="1519305819586" duration="75000" />
       <workItem from="1519829765743" duration="822000" />
-      <workItem from="1519908452432" duration="5684000" />
+      <workItem from="1519908452432" duration="5939000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="ControladorLoginTest_errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError - 2018.03.01 at 12h 20m 25s.xml">
+      <configuration name="ControladorLoginTest.errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControladorLoginTest_errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError - 2018.03.01 at 12h 20m 40s.xml">
+      <configuration name="ControladorLoginTest.errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControladorLoginTest_errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError - 2018.03.01 at 12h 20m 50s.xml">
+      <configuration name="ControladorLoginTest.errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="ControladorLoginTest_registrameSiUsuarioNoExisteDeberiaCrearUsuarioYVolverAlLogin - 2018.03.01 at 12h 04m 50s.xml">
       <configuration name="ControladorLoginTest.registrameSiUsuarioNoExisteDeberiaCrearUsuarioYVolverAlLogin" configurationId="JUnit" />
     </history-entry>
@@ -1052,18 +1060,9 @@
     <history-entry file="ControladorLoginTest_registrarmeSiUsuarioNoExisteDeberiaVolverAFormularioYMostrarError - 2018.03.01 at 12h 14m 42s.xml">
       <configuration name="ControladorLoginTest.registrarmeSiUsuarioNoExisteDeberiaVolverAFormularioYMostrarError" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ControladorPersonasTest - 2018.03.01 at 10h 51m 24s.xml">
-      <configuration name="ControladorPersonasTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControladorPersonasTest - 2018.03.01 at 10h 51m 48s.xml">
-      <configuration name="ControladorPersonasTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControladorPersonasTest - 2018.03.01 at 10h 51m 58s.xml">
-      <configuration name="ControladorPersonasTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17953000" />
+    <option name="totallyTimeSpent" value="18208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1046" extended-state="6" />
@@ -1531,20 +1530,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/grupoesfera/cursospring/controladores/ControladorLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+        <state relative-caret-position="252">
+          <caret line="52" column="71" lean-forward="false" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2444#2445#0" expanded="true" />
-            <element signature="e#2485#2486#0" expanded="true" />
+            <element signature="e#2123#2124#0" expanded="true" />
+            <element signature="e#2161#2162#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+            <element signature="e#2300#2301#0" expanded="true" />
+            <element signature="e#2600#2601#0" expanded="true" />
+            <element signature="e#2641#2642#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/grupoesfera/cursospring/controladores/ControladorLoginTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="86" column="85" lean-forward="false" selection-start-line="86" selection-start-column="85" selection-end-line="86" selection-end-column="85" />
+        <state relative-caret-position="614">
+          <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
           <folding />
         </state>
       </provider>
