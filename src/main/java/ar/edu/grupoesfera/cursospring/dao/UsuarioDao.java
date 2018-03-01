@@ -6,4 +6,6 @@ import ar.edu.grupoesfera.cursospring.modelo.Usuario;
 public interface UsuarioDao {
 	
 	Usuario consultarUsuario(Usuario usuario);
+
+    Usuario buscarPor(String email);
 }

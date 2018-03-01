@@ -14,16 +14,23 @@ import org.springframework.transaction.annotation.Transactional;
 public class ServicioLoginImpl implements ServicioLogin {
 
 	@Inject
-	private UsuarioDao servicioLoginDao;
+	private UsuarioDao usuarioDao;
 
 	@Override
 	public Usuario consultarUsuario (Usuario usuario) {
-		return servicioLoginDao.consultarUsuario(usuario);
+		return usuarioDao.consultarUsuario(usuario);
 	}
 
 	@Override
 	public void registrar(Usuario usuario) throws UsuarioExistente {
+		Usuario usuarioEncontrado = usuarioDao.buscarPor(usuario.getEmail());
+		if(usuarioEncontrado != null){
+			throw new UsuarioExistente();
+		}
+	}
 
+	public void setUsuarioDao(UsuarioDao usuarioDao) {
+		this.usuarioDao = usuarioDao;
 	}
 
 }

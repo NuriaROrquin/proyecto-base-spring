@@ -23,4 +23,9 @@ public class UsuarioDaoImpl implements UsuarioDao {
 				.uniqueResult();
 	}
 
+	@Override
+	public Usuario buscarPor(String email) {
+		return null;
+	}
+
 }
