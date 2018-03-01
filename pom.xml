@@ -3,6 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>proyecto-base-spring</groupId>
 	<artifactId>proyecto-base-spring</artifactId>
+	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<resources>
@@ -17,6 +18,33 @@
 				<filtering>true</filtering>
 			</testResource>
 		</testResources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.cargo</groupId>
+					<artifactId>cargo-maven2-plugin</artifactId>
+					<version>1.5.0</version>
+					<configuration>
+						<configuration>
+							<properties>
+								<cargo.servlet.port>8080</cargo.servlet.port>
+							</properties>
+						</configuration>
+						<deployables>
+							<deployable>
+								<properties>
+									<context>pois-app</context>
+								</properties>
+							</deployable>
+						</deployables>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -27,8 +55,82 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>perform-it</id>
+						<goals>
+							<goal>integration-test</goal>
+						</goals>
+						<configuration>
+							<systemProperties>
+								<property>
+									<name>servlet.port</name>
+									<value>8080</value>
+								</property>
+							</systemProperties>
+						</configuration>
+					</execution>
+					<execution>
+						<id>verify-it</id>
+						<goals>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>start-cargo</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>start</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>stop-cargo</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>jetty7x</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.codehaus.cargo</groupId>
+							<artifactId>cargo-maven2-plugin</artifactId>
+							<configuration>
+								<container>
+									<containerId>jetty7x</containerId>
+									<artifactInstaller>
+										<groupId>org.eclipse.jetty</groupId>
+										<artifactId>jetty-distribution</artifactId>
+										<version>7.6.17.v20150415</version>
+									</artifactInstaller>
+								</container>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
