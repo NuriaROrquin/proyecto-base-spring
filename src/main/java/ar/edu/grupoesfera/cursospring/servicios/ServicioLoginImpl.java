@@ -4,6 +4,7 @@ import javax.inject.Inject;
 
 import ar.edu.grupoesfera.cursospring.dao.UsuarioDao;
 import ar.edu.grupoesfera.cursospring.modelo.Usuario;
+import ar.edu.grupoesfera.cursospring.modelo.UsuarioExistente;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,12 +22,7 @@ public class ServicioLoginImpl implements ServicioLogin {
 	}
 
 	@Override
-	public Boolean existeUsuario(String email) {
-		return null;
-	}
-
-	@Override
-	public void registrar(Usuario usuario) {
+	public void registrar(Usuario usuario) throws UsuarioExistente {
 
 	}
 

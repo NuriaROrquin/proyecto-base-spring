@@ -1,6 +1,7 @@
 package ar.edu.grupoesfera.cursospring.controladores;
 
 import ar.edu.grupoesfera.cursospring.modelo.Usuario;
+import ar.edu.grupoesfera.cursospring.modelo.UsuarioExistente;
 import ar.edu.grupoesfera.cursospring.servicios.ServicioLogin;
 import org.junit.Before;
 import org.junit.Test;
@@ -61,10 +62,7 @@ public class ControladorLoginTest {
 	}
 
 	@Test
-	public void registrameSiUsuarioNoExisteDeberiaCrearUsuarioYVolverAlLogin(){
-
-		// preparacion
-		when(servicioLoginMock.existeUsuario(usuarioMock.getEmail())).thenReturn(Boolean.FALSE);
+	public void registrameSiUsuarioNoExisteDeberiaCrearUsuarioYVolverAlLogin() throws UsuarioExistente {
 
 		// ejecucion
 		ModelAndView modelAndView = controladorLogin.registrarme(usuarioMock);
@@ -75,23 +73,21 @@ public class ControladorLoginTest {
 	}
 
 	@Test
-	public void registrarmeSiUsuarioNoExisteDeberiaVolverAFormularioYMostrarError(){
+	public void registrarmeSiUsuarioExisteDeberiaVolverAFormularioYMostrarError() throws UsuarioExistente {
 		// preparacion
-		when(servicioLoginMock.existeUsuario(usuarioMock.getEmail())).thenReturn(Boolean.TRUE);
+		doThrow(UsuarioExistente.class).when(servicioLoginMock).registrar(usuarioMock);
 
 		// ejecucion
 		ModelAndView modelAndView = controladorLogin.registrarme(usuarioMock);
 
 		// validacion
 		assertThat(modelAndView.getViewName()).isEqualTo("nuevo-usuario");
-		assertThat(modelAndView.getModel().get("error")).isEqualTo("Usuario ya existe");
-		verify(servicioLoginMock, never()).registrar(usuarioMock);
+		assertThat(modelAndView.getModel().get("error")).isEqualTo("El usuario ya existe");
 	}
 
 	@Test
-	public void errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError(){
+	public void errorEnRegistrarmeDeberiaVolverAFormularioYMostrarError() throws UsuarioExistente {
 		// preparacion
-		when(servicioLoginMock.existeUsuario(usuarioMock.getEmail())).thenReturn(Boolean.FALSE);
 		doThrow(Exception.class).when(servicioLoginMock).registrar(usuarioMock);
 
 		// ejecucion

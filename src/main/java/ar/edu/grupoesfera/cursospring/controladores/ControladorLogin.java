@@ -4,6 +4,7 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
 import ar.edu.grupoesfera.cursospring.modelo.Usuario;
+import ar.edu.grupoesfera.cursospring.modelo.UsuarioExistente;
 import ar.edu.grupoesfera.cursospring.servicios.ServicioLogin;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -46,18 +47,16 @@ public class ControladorLogin {
 	public ModelAndView registrarme(@ModelAttribute("usuario") Usuario usuario) {
 		ModelMap model = new ModelMap();
 
-		if (!servicioLogin.existeUsuario(usuario.getEmail())) {
 			try{
 				servicioLogin.registrar(usuario);
+			} catch (UsuarioExistente e){
+				model.put("error", "El usuario ya existe");
+				return new ModelAndView("nuevo-usuario", model);
 			} catch (Exception e){
 				model.put("error", "Error al registrar el nuevo usuario");
 				return new ModelAndView("nuevo-usuario", model);
 			}
 			return new ModelAndView("redirect:/login");
-		} else {
-			model.put("error", "Usuario ya existe");
-			return new ModelAndView("nuevo-usuario", model);
-		}
 	}
 
 	@RequestMapping(path = "/home", method = RequestMethod.GET)
