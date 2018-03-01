@@ -1,7 +1,6 @@
 package ar.edu.grupoesfera.cursospring.servicios;
 
 import static org.mockito.Mockito.*;
-import static org.assertj.core.api.Assertions.*;
 
 import ar.edu.grupoesfera.cursospring.dao.UsuarioDao;
 import ar.edu.grupoesfera.cursospring.modelo.Usuario;
@@ -15,13 +14,18 @@ public class ServicioLoginTest {
     private ServicioLoginImpl servicioLogin;
     private Usuario usuarioMock;
     private UsuarioDao usuarioDaoMock;
+    private ServicioMail servicioMailMock;
 
     @Before
     public void init(){
         servicioLogin = new ServicioLoginImpl();
         usuarioMock = mock(Usuario.class);
+
         usuarioDaoMock = mock(UsuarioDao.class);
         servicioLogin.setUsuarioDao(usuarioDaoMock);
+
+        servicioMailMock = mock(ServicioMail.class);
+        servicioLogin.setServicioMail(servicioMailMock);
     }
 
     @Test(expected = UsuarioExistente.class)
@@ -32,15 +36,35 @@ public class ServicioLoginTest {
 
         // ejecucion
         servicioLogin.registrar(usuarioMock);
+
+        // validacion
+        verify(servicioMailMock, never()).enviarMailDeBienvenida(usuarioMock);
     }
 
     @Test(expected = Exception.class)
     public void registrarmeDeberiaLanzarExceptionSiOcurreUnErrorAlGuardarElUsuarioNuevo() throws UsuarioExistente {
 
         // preparacion
+        when(usuarioDaoMock.buscarPor(usuarioMock.getEmail())).thenReturn(null);
         doThrow(HibernateException.class).when(usuarioDaoMock).guardar(usuarioMock);
 
         // ejecucion
         servicioLogin.registrar(usuarioMock);
+
+        // validacion
+        verify(servicioMailMock, never()).enviarMailDeBienvenida(usuarioMock);
+    }
+
+    @Test
+    public void registrarmeDeberiaGuardarElNuevoUsuarioSiElUsuarioNoExiste() throws UsuarioExistente {
+
+        // preparacion
+        when(usuarioDaoMock.buscarPor(usuarioMock.getEmail())).thenReturn(null);
+
+        // ejecucion
+        servicioLogin.registrar(usuarioMock);
+
+        // validacion
+        verify(servicioMailMock, times(1)).enviarMailDeBienvenida(usuarioMock);
     }
 }

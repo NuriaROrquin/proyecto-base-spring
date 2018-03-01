@@ -16,6 +16,9 @@ public class ServicioLoginImpl implements ServicioLogin {
 	@Inject
 	private UsuarioDao usuarioDao;
 
+	@Inject
+	private ServicioMail servicioMail;
+
 	@Override
 	public Usuario consultarUsuario (Usuario usuario) {
 		return usuarioDao.consultarUsuario(usuario);
@@ -28,10 +31,14 @@ public class ServicioLoginImpl implements ServicioLogin {
 			throw new UsuarioExistente();
 		}
 		usuarioDao.guardar(usuario);
+		servicioMail.enviarMailDeBienvenida(usuario);
 	}
 
 	public void setUsuarioDao(UsuarioDao usuarioDao) {
 		this.usuarioDao = usuarioDao;
 	}
 
+	public void setServicioMail(ServicioMail servicioMail) {
+		this.servicioMail = servicioMail;
+	}
 }
