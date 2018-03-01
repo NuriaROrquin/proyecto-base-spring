@@ -1,9 +1,8 @@
 package ar.edu.grupoesfera.cursospring.servicios;
 
-import java.util.List;
-
 import ar.edu.grupoesfera.cursospring.modelo.Persona;
-import ar.edu.grupoesfera.cursospring.modelo.Usuario;
+
+import java.util.List;
 
 public interface PersonaService {
 
@@ -13,5 +12,4 @@ public interface PersonaService {
 	
 	Persona buscarPorId(Long id);
 	
-	Usuario validarUsuario(String usuario, String password);
 }

@@ -1,6 +1,7 @@
 package ar.edu.grupoesfera.cursospring.dao;
 
 import ar.edu.grupoesfera.cursospring.modelo.Persona;
+import ar.edu.grupoesfera.cursospring.modelo.Usuario;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Service;
@@ -41,5 +42,9 @@ public class Inicializacion {
         p4.setEmail("seba@seba.com");
         p4.setNombre("Marcos");
         session.save(p4);
+        Usuario u = new Usuario();
+        u.setEmail("seba@seba.com");
+        u.setPassword("1234");
+        session.save(u);
     }
 }

@@ -1,16 +1,13 @@
 package ar.edu.grupoesfera.cursospring.servicios;
 
-import java.util.List;
-
-import javax.inject.Inject;
-
+import ar.edu.grupoesfera.cursospring.dao.PersonaDao;
+import ar.edu.grupoesfera.cursospring.modelo.Persona;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import ar.edu.grupoesfera.cursospring.dao.PersonaDao;
-import ar.edu.grupoesfera.cursospring.modelo.Persona;
-import ar.edu.grupoesfera.cursospring.modelo.Usuario;
+import javax.inject.Inject;
+import java.util.List;
 
 @Service("personaService")
 @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
@@ -30,11 +27,5 @@ public class PersonaServiceImpl implements PersonaService{
 	public Persona buscarPorId(Long id) {
 		return personaDao.findById(id);
 	}
-
-	@Override
-	public Usuario validarUsuario(String usuario, String password) {
-		return null;
-	}
-
 
 }
