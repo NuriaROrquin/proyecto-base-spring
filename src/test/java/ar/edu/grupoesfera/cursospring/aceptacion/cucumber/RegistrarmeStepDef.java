@@ -10,14 +10,25 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class RegistrarmeStepDef extends TestDeAceptacion {
 
-    String url = urlBase + "/nuevo-usuario";
+    private String url = urlBase + "/nuevo-usuario";
 
     @Given("que ingreso el usuario (.*) con clave (.*)")
     public void ingresoUsuario(String usuario, String clave){
         seleniumDriver.get(url);
         seleniumDriver.findElement(By.id("email")).sendKeys(usuario);
         seleniumDriver.findElement(By.id("password")).sendKeys(clave);
+    }
 
+    @Given("que ya existe el usuario  (.*) con clave (.*)")
+    public void ingresoUsuarioDuplicado(String usuario, String clave){
+        seleniumDriver.get(url);
+        seleniumDriver.findElement(By.id("email")).sendKeys(usuario);
+        seleniumDriver.findElement(By.id("password")).sendKeys(clave);
+        seleniumDriver.findElement(By.id("btn-registrarme")).click();
+
+        seleniumDriver.get(url);
+        seleniumDriver.findElement(By.id("email")).sendKeys(usuario);
+        seleniumDriver.findElement(By.id("password")).sendKeys(clave);
     }
 
     @When("intento registrarme")
@@ -27,7 +38,12 @@ public class RegistrarmeStepDef extends TestDeAceptacion {
 
     @Then("el usuario se crea y me redirige a la vista (.*)")
     public void redirigeA(String vista){
-        System.out.println(seleniumDriver.getPageSource());
+        assertThat(seleniumDriver.getCurrentUrl()).contains(vista);
+    }
+
+    @Then("el usuario NO se crea y me redirige a la vista (.*) y muestra el mensaje '(.*)'")
+    public void vuelveARegistro(String vista, String mensaje){
+        assertThat(seleniumDriver.getPageSource()).contains(mensaje);
         assertThat(seleniumDriver.getCurrentUrl()).contains(vista);
     }
 
