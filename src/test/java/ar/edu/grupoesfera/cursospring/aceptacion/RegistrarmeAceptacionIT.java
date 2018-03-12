@@ -21,7 +21,7 @@ public class RegistrarmeAceptacionIT extends TestDeAceptacion {
         seleniumDriver.findElement(By.id("btn-registrarme")).click();
 
         // validacion
-        assertThat(seleniumDriver.getPageSource()).contains("validar-login");
+        assertThat(seleniumDriver.getCurrentUrl()).contains("login");
     }
 
     @Test
@@ -41,6 +41,7 @@ public class RegistrarmeAceptacionIT extends TestDeAceptacion {
 
         // validacion
         assertThat(seleniumDriver.getPageSource()).contains("El usuario ya existe");
+        assertThat(seleniumDriver.getCurrentUrl()).contains("registrarme");
     }
 
 }

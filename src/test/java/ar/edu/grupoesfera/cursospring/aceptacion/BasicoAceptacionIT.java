@@ -12,7 +12,6 @@ public class BasicoAceptacionIT extends TestDeAceptacion {
 	@Test
 	public void smoke() throws Exception {
 		URL url = new URL(urlBase + "/login");
-		System.out.println(url);
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		connection.connect();
 		assertThat(connection.getResponseCode()).isEqualTo(200);
