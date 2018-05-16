@@ -19,7 +19,7 @@ public class RegistrarmeStepDef extends TestDeAceptacion {
         seleniumDriver.findElement(By.id("password")).sendKeys(clave);
     }
 
-    @Given("que ya existe el usuario  (.*) con clave (.*)")
+    @Given("que ya existe el usuario (.*) con clave (.*)")
     public void ingresoUsuarioDuplicado(String usuario, String clave){
         seleniumDriver.get(url);
         seleniumDriver.findElement(By.id("email")).sendKeys(usuario);

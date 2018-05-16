@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import ar.edu.grupoesfera.cursospring.modelo.Usuario;
 import ar.edu.grupoesfera.cursospring.modelo.UsuarioExistente;
 import ar.edu.grupoesfera.cursospring.servicios.ServicioLogin;
+import org.apache.commons.validator.routines.EmailValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -46,17 +47,20 @@ public class ControladorLogin {
 	@RequestMapping(path = "/registrarme", method = RequestMethod.POST)
 	public ModelAndView registrarme(@ModelAttribute("usuario") Usuario usuario) {
 		ModelMap model = new ModelMap();
-
-			try{
-				servicioLogin.registrar(usuario);
-			} catch (UsuarioExistente e){
-				model.put("error", "El usuario ya existe");
-				return new ModelAndView("nuevo-usuario", model);
-			} catch (Exception e){
-				model.put("error", "Error al registrar el nuevo usuario");
-				return new ModelAndView("nuevo-usuario", model);
-			}
-			return new ModelAndView("redirect:/login");
+//		if(!EmailValidator.getInstance().isValid(usuario.getEmail())){
+//			model.put("error", "El formato del usuario no es una direccion de email válida");
+//			return new ModelAndView("nuevo-usuario", model);
+//		}
+		try{
+			servicioLogin.registrar(usuario);
+		} catch (UsuarioExistente e){
+			model.put("error", "El usuario ya existe");
+			return new ModelAndView("nuevo-usuario", model);
+		} catch (Exception e){
+			model.put("error", "Error al registrar el nuevo usuario");
+			return new ModelAndView("nuevo-usuario", model);
+		}
+		return new ModelAndView("redirect:/login");
 	}
 
 	@RequestMapping(path = "/home", method = RequestMethod.GET)

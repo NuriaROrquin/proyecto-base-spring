@@ -24,6 +24,7 @@ public class ControladorLoginTest {
 	@Before
 	public void init(){
 		usuarioMock = mock(Usuario.class);
+		when(usuarioMock.getEmail()).thenReturn("seba@seba.com");
 		requestMock = mock(HttpServletRequest.class);
 		sessionMock = mock(HttpSession.class);
 		servicioLoginMock = mock(ServicioLogin.class);
