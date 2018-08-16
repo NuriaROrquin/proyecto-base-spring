@@ -16,3 +16,5 @@ hs_err_pid*
 /work/
 .settings/org.eclipse.m2e.core.prefs
 /.classpath
+/.idea/
+/.settings/
