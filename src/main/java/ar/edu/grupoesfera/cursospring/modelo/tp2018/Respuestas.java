@@ -59,4 +59,20 @@ public class Respuestas extends SpringTest{
                 .list();
         assertThat(paises).hasSize(1);
 	}
+    
+    @Test
+    @Transactional
+    @Rollback
+    // Hacer con junit un test que busque todos los países cuya capital están al norte del trópico de cáncer.
+	public void ejercicio4() {
+    	
+	}
+    
+    @Test
+    @Transactional
+    @Rollback
+    // Hacer con junit un test que busque todas las ciudades del hemisferio sur 
+	public void ejercicio5() {
+    	
+	}
 }
