@@ -101,6 +101,10 @@ public class Respuestas extends SpringTest{
     @Rollback
     // Hacer con junit un test que busque todas las ciudades del hemisferio sur 
 	public void ejercicio5() {
-    	
+    	final List<Ciudad> ciudades = getSession().createCriteria(Ciudad.class)
+                .createAlias("ubicacion", "ubi")
+                .add(Restrictions.gt("ubi.latitud", 0F))
+                .list();
+        assertThat(ciudades).hasSize(1);
 	}
 }
