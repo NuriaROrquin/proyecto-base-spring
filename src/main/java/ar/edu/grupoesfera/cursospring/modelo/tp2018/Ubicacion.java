@@ -11,9 +11,9 @@ public class Ubicacion {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	private Long latitud;
+	private Float latitud;
 	
-	private Long longitud;
+	private Float longitud;
 	
 	public Long getId() {
 		return id;
@@ -21,16 +21,16 @@ public class Ubicacion {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getLatitud() {
+	public Float getLatitud() {
 		return latitud;
 	}
-	public void setLatitud(Long latitud) {
+	public void setLatitud(Float latitud) {
 		this.latitud = latitud;
 	}
-	public Long getLongitud() {
+	public Float getLongitud() {
 		return longitud;
 	}
-	public void setLongitud(Long longitud) {
+	public void setLongitud(Float longitud) {
 		this.longitud = longitud;
 	}
 

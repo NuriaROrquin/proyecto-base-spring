@@ -1,5 +1,7 @@
 package ar.edu.grupoesfera.cursospring.modelo.tp2018;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.util.List;
 
 import org.hibernate.criterion.Restrictions;
@@ -9,10 +11,8 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import ar.edu.grupoesfera.cursospring.SpringTest;
-import ar.edu.grupoesfera.cursospring.modelo.Farmacia;
 
-import static org.assertj.core.api.Assertions.*;
-
+@SuppressWarnings("unchecked")
 public class Respuestas extends SpringTest{
 
 	@Before
@@ -27,14 +27,37 @@ public class Respuestas extends SpringTest{
 		getSession().save(america);
 		
 		Pais inglaterra = new Pais();
-		inglaterra.setIdioma("ingles");
-		inglaterra.setContinente(europa);
 		getSession().save(inglaterra);
 		
+		Ubicacion uLondres = new Ubicacion();
+		uLondres.setLatitud(51.5072F);
+		uLondres.setLongitud(-0.1275F);
+		
+		Ciudad londres = new Ciudad();
+		londres.setUbicacion(uLondres);
+		londres.setPais(inglaterra);
+		getSession().save(londres);
+		
+		inglaterra.setIdioma("ingles");
+		inglaterra.setCapital(londres);
+		inglaterra.setContinente(europa);
+		getSession().update(inglaterra);
+		
 		Pais argentina = new Pais();
+		getSession().save(argentina);
+
+		Ubicacion uBaires = new Ubicacion();
+		uBaires.setLatitud(-34.6083F);
+		uBaires.setLongitud(-58.3712F);
+		
+		Ciudad baires = new Ciudad();
+		baires.setUbicacion(uBaires);
+		baires.setPais(argentina);
+		getSession().save(baires);
+	
 		argentina.setIdioma("español");
 		argentina.setContinente(america);
-		getSession().save(argentina);
+		getSession().update(argentina);
 	}
 	
     @Test
@@ -42,18 +65,18 @@ public class Respuestas extends SpringTest{
     @Rollback
     // Hacer con junit un test que busque todos los países de habla inglesa.
 	public void ejercicio2() {
-    	final List paises = getSession().createCriteria(Pais.class)
+    	final List<Pais> paises = getSession().createCriteria(Pais.class)
                 .add(Restrictions.eq("idioma", "ingles"))
                 .list();
         assertThat(paises).hasSize(1);
 	}
     
-    @Test
+	@Test
     @Transactional
     @Rollback
     // Hacer con junit un test que busque todos los países del continente europeo.
 	public void ejercicio3() {
-    	final List paises = getSession().createCriteria(Pais.class)
+    	final List<Pais> paises = getSession().createCriteria(Pais.class)
                 .createAlias("continente", "cont")
                 .add(Restrictions.eq("cont.nombre", "europa"))
                 .list();
@@ -65,7 +88,12 @@ public class Respuestas extends SpringTest{
     @Rollback
     // Hacer con junit un test que busque todos los países cuya capital están al norte del trópico de cáncer.
 	public void ejercicio4() {
-    	
+    	final List<Pais> paises = getSession().createCriteria(Pais.class)
+                .createAlias("capital", "capi")
+                .createAlias("capi.ubicacion", "ubi")
+                .add(Restrictions.gt("ubi.latitud", 23.43722F))
+                .list();
+        assertThat(paises).hasSize(1);
 	}
     
     @Test
