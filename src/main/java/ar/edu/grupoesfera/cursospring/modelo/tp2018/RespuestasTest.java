@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ar.edu.grupoesfera.cursospring.SpringTest;
 
 @SuppressWarnings("unchecked")
-public class Respuestas extends SpringTest{
+public class RespuestasTest extends SpringTest{
 
 	@Before
 	public void setup() {
