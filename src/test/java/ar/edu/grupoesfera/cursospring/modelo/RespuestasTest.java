@@ -1,4 +1,4 @@
-package ar.edu.grupoesfera.cursospring.modelo.tp2018;
+package ar.edu.grupoesfera.cursospring.modelo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -11,6 +11,10 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import ar.edu.grupoesfera.cursospring.SpringTest;
+import ar.edu.grupoesfera.cursospring.modelo.tp2018.Ciudad;
+import ar.edu.grupoesfera.cursospring.modelo.tp2018.Continente;
+import ar.edu.grupoesfera.cursospring.modelo.tp2018.Pais;
+import ar.edu.grupoesfera.cursospring.modelo.tp2018.Ubicacion;
 
 @SuppressWarnings("unchecked")
 public class RespuestasTest extends SpringTest{
