@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62dfe062-d1f7-40cf-9480-15e2ce090dac" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -432,7 +433,7 @@
       <workItem from="1559914667177" duration="22000" />
       <workItem from="1562277289970" duration="5527000" />
       <workItem from="1600984091625" duration="216000" />
-      <workItem from="1630070325326" duration="270000" />
+      <workItem from="1630070325326" duration="717000" />
     </task>
     <servers />
   </component>
