@@ -58,6 +58,9 @@
           <element id="library" level="project" name="Maven: commons-digester:commons-digester:1.8.1" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
           <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.4.01" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.2.11" />
+          <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-core:2.2.11" />
+          <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.2.11" />
         </element>
       </element>
       <element id="directory" name="META-INF">
