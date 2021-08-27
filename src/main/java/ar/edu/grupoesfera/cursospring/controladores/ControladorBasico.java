@@ -9,11 +9,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ControladorBasico {
 
-    @RequestMapping("/saludito")
-    public ModelAndView escucharSaludo(){
+    @RequestMapping("/saludar")
+    public ModelAndView saludar(@RequestParam(name="nombre", required=true) String nombre){
         ModelMap model = new ModelMap();
 
-        model.put("saludoParaMostrar", "HOLA CAPO!!!!");
+        model.put("saludoParaMostrar", "HOLA!" + nombre);
         return new ModelAndView("saludo", model);
     }
 

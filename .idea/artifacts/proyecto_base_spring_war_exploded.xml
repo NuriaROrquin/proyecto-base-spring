@@ -1,6 +1,14 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="proyecto-base-spring:war exploded">
     <output-path>$PROJECT_DIR$/target/proyecto-base-spring-0.0.1-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>proyecto-base-spring</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
